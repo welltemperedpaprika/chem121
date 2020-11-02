@@ -1,0 +1,7 @@
+At the end of the semester, you will carry out a final project, which focuses on a molecular system of your own choosing.
+Write a sentence or two describing (a) your scientific interests within chemistry,and (b) a molecular system you might
+like to explore in your final project.  (There will be plenty of time to refine or change this proposed topic.)
+
+Ans:
+My interest is theoretical chemistry - method development of electronic structure theory and applications of molecule
+light interaction. I would like to explore charge transfer systems for my final project.
