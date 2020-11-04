@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from histogram_class import histogram
 
 def compute_statistics(n, width=0.1):
+    '''Computes relevant statistics given n, number of samples, and width, binwidth.'''
     h = histogram(limits=[0, 1], binwidth=width)
     for n in range(int(n)):
         dat = np.random.rand()
@@ -16,6 +17,7 @@ def compute_statistics(n, width=0.1):
     return mean, mean_square, std_dev, error_of_mean
 
 def make_hist_err_plot(n, width=0.1):
+    '''Makes histogram error plot using computes error bars at each bin, given n, number of samples, width, binwidth.'''
     h = histogram(limits=[0, 1], binwidth=width)
     for n in range(int(n)):
         dat = np.random.rand()
@@ -25,14 +27,15 @@ def make_hist_err_plot(n, width=0.1):
     h.plot_error_bars()
     plt.hlines(1, h.limits[0], h.limits[1], color='orange', label='true p(X)')
     plt.legend()
+    plt.title('Histogram of binwidth={0}'.format(width))
 
 
 if __name__ == '__main__':
     #i)
-    print("""See histogram_class.py for question 1i) - iii).""")
+    print("""i-iii) See histogram_class.py for question 1i) - iii).""")
 
     #iv-v)
-    '''Nsamp = [100, 10e3, 10e4, 10e5, 10e6]
+    Nsamp = [100, 10e3, 10e4, 10e5, 10e6] # initialize relevant statistics
     means = []
     mean_squares = []
     std_devs = []
@@ -47,7 +50,7 @@ if __name__ == '__main__':
                          ,'error_of_mean': errors_of_mean})
     print("""iv-v) The error of mean gets smaller as the mean of the sample gets closer to the theoretical value.
     Shown in the table below:
-    {0}""".format(table))'''
+    {0}""".format(table))
 
     #vi - vii)
     print("""vi-vii) See histogram_class.py for method implemented.""")

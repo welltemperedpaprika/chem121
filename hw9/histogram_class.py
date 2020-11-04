@@ -58,16 +58,19 @@ class histogram():
         return self.std_dev
 
     def compute_error_of_mean(self):
+        '''Computes my error of mean'''
         self.error_of_mean = self.std_dev / sqrt(self.N_samples)
         return self.error_of_mean
 
     def compute_histogram_error(self):
+        '''Computes my error at each bin of histogram'''
         histogram_err = 0 * self.histo
         for c, x in enumerate(self.histo):
             histogram_err[c] = sqrt(x*(1 - x * self.binwidth) / (self.N_samples * self.binwidth))
         return histogram_err
 
     def plot_error_bars(self):
+        '''Makes a plot using the 2*errors of each bin as error bars.'''
         y_err = 2 * self.compute_histogram_error()
         errorbar(self.vals, self.histo, y_err, fmt='.')
         xlabel('x')
