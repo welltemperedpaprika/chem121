@@ -27,7 +27,7 @@ def random_walk(x_init=0.5, maxhop=0.5, nsteps=1000, accept_all=True):
             x = xtrial
             xtrajectory[step] = x
         elif xtrial >= 0 and xtrial <= 1: # accept only if the trial step is within criterion.
-            x = xtrial 
+            x = xtrial
             xtrajectory[step] = x
     return xtrajectory
 
@@ -71,7 +71,7 @@ if __name__ == '__main__':
     plt.title('Count of trajectory for nsteps=10e5 when rejecting inappropriate trajectories.')
     plt.savefig('ps9_problem2iv.png')
     plt.show()
-    print('''iii) From the plot, we can see that the distribution when all moves are accepted tends towards a 
+    print('''iv) From the plot, we can see that the distribution when all moves are accepted tends towards a 
     uniform distribution, whereas when only acceptable moves are recorded, the distribution clusters around the mean.
     This means that if we neglect passage of time, all states are likely to be selected, and our Monte Carlo sampling 
     would not mean much in a physical system.''')
